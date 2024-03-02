@@ -13,11 +13,11 @@ export const TransformPlugin = createUnplugin(({ ctx, options, sourcemap }: { ct
     enforce: 'post',
     transformInclude (id) {
       // Included
-      if (options.transform?.include?.some(pattern => pattern.test(id))) {
+       if (options.transform?.include?.some(pattern => pattern.test(id))) {
         return true
       }
       // Excluded
-      if (options.transform?.exclude?.some(pattern => pattern.test(id))) {
+      if (options.transform?.exclude?.some(pattern => pattern.test(id))) {       
         return false
       }
 
